@@ -1,0 +1,14 @@
+server:
+  port: 8086
+
+zuul:
+  routes:
+    company_management:
+      url: http://localhost:8083
+      sensitiveHeaders: Cookie,Set-Cookie
+    stock_management:
+      url: http://localhost:8084
+      sensitiveHeaders: Cookie,Set-Cookie
+    user_management:
+      url: http://localhost:8087
+      sensitiveHeaders: Cookie,Set-Cookie
